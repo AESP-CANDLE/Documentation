@@ -1,0 +1,13 @@
+# Documentation
+We'll put docs here
+
+Drug Generator (360/sec) produces SMILES
+Smiles 2 Descriptors (2 drugs/second) produces Descriptors
+One drug becomes 1000 inputs to response model (1000 cell lines)
+
+
+
+Drug generator         Smiles to Descriptors          Response Prediction
+360 drug smiles/sec    2 drug descriptors/sec         2000 inferences per drug
+
+You can generate 360 drugs per second. To match this output, we need to translate 360 drug smiles to descriptors per second
