@@ -10,4 +10,8 @@ One drug becomes 1000 inputs to response model (1000 cell lines)
 Drug generator         Smiles to Descriptors          Response Prediction
 360 drug smiles/sec    2 drug descriptors/sec         2000 inferences per drug
 
-You can generate 360 drugs per second. To match this output, we need to translate 360 drug smiles to descriptors per second
+You can generate 360 drugs per second. To match this output, we need to translate 360 drug smiles to descriptors per second. This means that we need 180 smiles to descriptor nodes per 1 node of drug generator.
+
+The output of the above is drug descriptors at a rate of 360 drug descriptors per second. Because each drug descriptor requires 1000 inferences, we need to be able to do 360,000 inferences per second. At a rate of 500 inferences per node per second, this means we need 720 inferencing nodes. 
+
+If we throw in UQ, then 30 predictions per sample for UQ
